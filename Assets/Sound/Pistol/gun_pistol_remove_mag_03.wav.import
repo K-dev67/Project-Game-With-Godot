@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gun_pistol_remove_mag_03.wav-a3677a3e4b85c5d575f594dfbb95272c.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/Pistol/gun_pistol_remove_mag_03.wav"
+dest_files=[ "res://.import/gun_pistol_remove_mag_03.wav-a3677a3e4b85c5d575f594dfbb95272c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

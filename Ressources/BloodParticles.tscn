@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Player/Blood/rondrouge.png" type="Texture" id=1]
+[ext_resource path="res://Ressources/BloodParticles.gd" type="Script" id=2]
+
+
+[node name="BloodParticles" type="CPUParticles2D"]
+amount = 20
+explosiveness = 1.0
+texture = ExtResource( 1 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2( 10, 10 )
+spread = 175.52
+gravity = Vector2( 0, 0 )
+initial_velocity = 826.83
+initial_velocity_random = 1.0
+scale_amount = 3.0
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

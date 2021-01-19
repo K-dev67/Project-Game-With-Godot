@@ -1,0 +1,119 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/GUI/Shop/paper background.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GUI/Shop/wood background.png" type="Texture" id=2]
+[ext_resource path="res://Interfaces/ShopInterface.gd" type="Script" id=3]
+
+[node name="ShopInterface" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -459.0
+margin_top = -269.0
+margin_right = 459.0
+margin_bottom = 269.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackGround2" type="TextureRect" parent="Background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -451.5
+margin_top = -260.5
+margin_right = 451.5
+margin_bottom = 260.5
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/BackGround2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -451.5
+margin_top = -260.5
+margin_right = 451.5
+margin_bottom = 260.5
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/BackGround2/VBoxContainer"]
+margin_right = 903.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="Background/BackGround2/VBoxContainer/HBoxContainer"]
+margin_top = 3.0
+margin_right = 879.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Shop"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Background/BackGround2/VBoxContainer/HBoxContainer"]
+margin_left = 883.0
+margin_right = 903.0
+margin_bottom = 20.0
+text = "X"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/BackGround2/VBoxContainer"]
+margin_top = 24.0
+margin_right = 903.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/BackGround2/VBoxContainer/VBoxContainer"]
+margin_right = 903.0
+margin_bottom = 20.0
+
+[node name="ShieldButton" type="Button" parent="Background/BackGround2/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 903.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Background/BackGround2/VBoxContainer/VBoxContainer/HBoxContainer/ShieldButton"]
+anchor_bottom = 1.0
+margin_right = 39.0
+text = "  Shield"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Background/BackGround2/VBoxContainer/VBoxContainer/HBoxContainer/ShieldButton"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -59.3406
+margin_top = -7.0
+margin_right = -7.34058
+margin_bottom = 7.0
+text = "1500 $  "
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Background/BackGround2/VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Background/BackGround2/VBoxContainer/VBoxContainer/HBoxContainer/ShieldButton" to="." method="_on_ShieldButton_pressed"]

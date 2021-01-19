@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Interfaces/RetryButton.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sound/misc_menu.wav" type="AudioStream" id=2]
+
+[node name="RestartButton" type="Button"]
+margin_right = 278.0
+margin_bottom = 119.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Retry"
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+[connection signal="button_up" from="." to="." method="_on_RetryButton_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_RetryButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_RetryButton_mouse_exited"]

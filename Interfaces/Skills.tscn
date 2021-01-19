@@ -1,0 +1,452 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Interfaces/Skills.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Player/carreblanc.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GUI/SkillTree/8.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GUI/SkillTree/3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GUI/SkillTree/png-927015.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GUI/SkillTree/87.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GUI/SkillTree/88.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GUI/SkillTree/73.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GUI/SkillTree/86.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GUI/SkillTree/79.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GUI/SkillTree/75.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GUI/SkillTree/77.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GUI/SkillTree/81.png" type="Texture" id=13]
+[ext_resource path="res://Assets/GUI/SkillTree/20.png" type="Texture" id=14]
+[ext_resource path="res://Assets/GUI/SkillTree/56.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 16 )
+
+[node name="Skills" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillsConnector" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SkillsConnector"]
+margin_top = 300.0
+margin_right = 1024.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 0, 200 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SkillsConnector"]
+margin_top = 500.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="SkillTree" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer4" type="MarginContainer" parent="SkillTree"]
+margin_right = 1024.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="3" type="HBoxContainer" parent="SkillTree"]
+margin_top = 50.0
+margin_right = 1024.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 100 )
+custom_constants/separation = 0
+
+[node name="FrontMargin2" type="MarginContainer" parent="SkillTree/3"]
+margin_right = 150.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="MargeBetwin4" type="MarginContainer" parent="SkillTree/3"]
+margin_left = 150.0
+margin_right = 250.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="MargeBetwin5" type="MarginContainer" parent="SkillTree/3"]
+margin_left = 250.0
+margin_right = 350.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="MargeBetwin6" type="MarginContainer" parent="SkillTree/3"]
+margin_left = 350.0
+margin_right = 450.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="MargeBetwin7" type="MarginContainer" parent="SkillTree/3"]
+margin_left = 450.0
+margin_right = 550.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="MargeBetwin8" type="MarginContainer" parent="SkillTree/3"]
+margin_left = 550.0
+margin_right = 650.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="3A" type="TextureRect" parent="SkillTree/3"]
+margin_left = 650.0
+margin_right = 750.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="SkillTree/3/3A"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 50, 50 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="SkillTree/3/3A/TextureRect"]
+
+[node name="TextureButton" type="TextureButton" parent="SkillTree/3/3A"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 90, 90 )
+texture_normal = ExtResource( 9 )
+texture_disabled = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer3" type="MarginContainer" parent="SkillTree"]
+margin_top = 150.0
+margin_right = 1024.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="2" type="HBoxContainer" parent="SkillTree"]
+margin_top = 250.0
+margin_right = 1024.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 0, 100 )
+custom_constants/separation = 0
+
+[node name="FrontMargin" type="MarginContainer" parent="SkillTree/2"]
+margin_right = 150.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="2A" type="TextureRect" parent="SkillTree/2"]
+margin_left = 150.0
+margin_right = 250.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="SkillTree/2/2A"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 50, 50 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="SkillTree/2/2A/TextureRect"]
+
+[node name="TextureButton" type="TextureButton" parent="SkillTree/2/2A"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 90, 90 )
+texture_normal = ExtResource( 12 )
+texture_disabled = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MargeBetwin" type="MarginContainer" parent="SkillTree/2"]
+margin_left = 250.0
+margin_right = 350.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="2B" type="TextureRect" parent="SkillTree/2"]
+margin_left = 350.0
+margin_right = 450.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="SkillTree/2/2B"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 50, 50 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="SkillTree/2/2B/TextureRect"]
+
+[node name="TextureButton" type="TextureButton" parent="SkillTree/2/2B"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 90, 90 )
+texture_normal = ExtResource( 10 )
+texture_disabled = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MargeBetwin2" type="MarginContainer" parent="SkillTree/2"]
+margin_left = 450.0
+margin_right = 550.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MargeBetwin3" type="MarginContainer" parent="SkillTree/2"]
+margin_left = 550.0
+margin_right = 650.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2C" type="TextureRect" parent="SkillTree/2"]
+margin_left = 650.0
+margin_right = 750.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="SkillTree/2/2C"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 50, 50 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="SkillTree/2/2C/TextureRect"]
+
+[node name="TextureButton" type="TextureButton" parent="SkillTree/2/2C"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 90, 90 )
+texture_normal = ExtResource( 15 )
+texture_disabled = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="SkillTree"]
+margin_top = 350.0
+margin_right = 1024.0
+margin_bottom = 450.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="1" type="HBoxContainer" parent="SkillTree"]
+margin_top = 450.0
+margin_right = 1024.0
+margin_bottom = 550.0
+rect_min_size = Vector2( 0, 100 )
+custom_constants/separation = 0
+
+[node name="SkillPoints" type="Label" parent="SkillTree/1"]
+margin_top = 9.0
+margin_right = 150.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 150, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "3
+points"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MargeBetwin4" type="MarginContainer" parent="SkillTree/1"]
+margin_left = 150.0
+margin_right = 250.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1A" type="TextureRect" parent="SkillTree/1"]
+margin_left = 250.0
+margin_right = 350.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="SkillTree/1/1A"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 50, 50 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="SkillTree/1/1A/TextureRect"]
+
+[node name="TextureButton" type="TextureButton" parent="SkillTree/1/1A"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 90, 90 )
+texture_normal = ExtResource( 3 )
+texture_disabled = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MargeBetwin5" type="MarginContainer" parent="SkillTree/1"]
+margin_left = 350.0
+margin_right = 450.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MargeBetwin6" type="MarginContainer" parent="SkillTree/1"]
+margin_left = 450.0
+margin_right = 550.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MargeBetwin7" type="MarginContainer" parent="SkillTree/1"]
+margin_left = 550.0
+margin_right = 650.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1B" type="TextureRect" parent="SkillTree/1"]
+margin_left = 650.0
+margin_right = 750.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="SkillTree/1/1B"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 50, 50 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="SkillTree/1/1B/TextureRect"]
+
+[node name="TextureButton" type="TextureButton" parent="SkillTree/1/1B"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 45.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 90, 90 )
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="SkillTree"]
+margin_top = 550.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Button" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "X"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

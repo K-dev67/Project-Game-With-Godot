@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Interfaces/Title.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Interfaces/ChangeSceneButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Interfaces/OptionsButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/ui_theme.tres" type="Theme" id=11]
+
+[sub_resource type="AnimatedTexture" id=1]
+
+[node name="PlayScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="." instance=ExtResource( 7 )]
+margin_left = -148.5
+margin_top = 76.3274
+margin_right = 162.5
+margin_bottom = 107.327
+text = "Du Zomblard En masse !"
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -136.019
+margin_top = -106.653
+margin_right = 134.981
+margin_bottom = 130.347
+rect_scale = Vector2( 0.929503, 1.04251 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="Menu" instance=ExtResource( 8 )]
+margin_right = 271.0
+margin_bottom = 44.0
+text = "Demo"
+next_scene_path = "res://Levels/Map01.tscn"
+
+[node name="Solo" parent="Menu" instance=ExtResource( 10 )]
+margin_top = 48.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Solo"
+text_button = "Solo"
+
+[node name="Multi" parent="Menu" instance=ExtResource( 10 )]
+margin_top = 96.0
+margin_bottom = 140.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Multijoueur"
+text_button = "Multijoueur"
+
+[node name="Character" parent="Menu" instance=ExtResource( 10 )]
+margin_top = 144.0
+margin_bottom = 188.0
+grow_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Character"
+text_button = "Character"
+
+[node name="MainMenu" parent="Menu" instance=ExtResource( 8 )]
+margin_top = 192.0
+margin_right = 271.0
+margin_bottom = 236.0
+text = "Main Menu"
+next_scene_path = "res://Interfaces/MainScreen.tscn"

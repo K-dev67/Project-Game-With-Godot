@@ -1,0 +1,102 @@
+{
+    "1": {
+        "zombie": 4,
+        "interval": 2,
+        "max_health": 100,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "2": {
+        "zombie": 6,
+        "interval": 2,
+        "max_health": 100,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "3": {
+        "zombie": 6,
+        "interval": 1.9,
+        "max_health": 110,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "4": {
+        "zombie": 6,
+        "interval": 1.8,
+        "max_health": 120,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "5": {
+        "zombie": 8,
+        "interval": 1.8,
+        "max_health": 130,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "6": {
+        "zombie": 8,
+        "interval": 1.7,
+        "max_health": 130,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "7": {
+        "zombie": 9,
+        "interval": 1.7,
+        "max_health": 140,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "8": {
+        "zombie": 9,
+        "interval": 1.7,
+        "max_health": 150,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "9": {
+        "zombie": 10,
+        "interval": 1.6,
+        "max_health": 150,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    },
+    "10": {
+        "zombie": 12,
+        "interval": 1.5,
+        "max_health": 200,
+        "wave_color": "green",
+        "speed_multiplier": 1,
+        "damage_multiplier": 1,
+        "money_multiplier": 1,
+        "exp_multiplier": 1
+    }
+}

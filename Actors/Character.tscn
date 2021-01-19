@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Actors/Character.gd" type="Script" id=2]
+[ext_resource path="res://Weapon/Pistol.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Actors/Health.gd" type="Script" id=4]
+[ext_resource path="res://Actors/WeaponManager.gd" type="Script" id=9]
+[ext_resource path="res://Weapon/SubMachineGun.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Weapon/ShotGun.tscn" type="PackedScene" id=255]
+[ext_resource path="res://Assets/Player/TestCircle3Perso.png" type="Texture" id=256]
+
+[node name="Character" type="KinematicBody2D" groups=[
+"Player",
+]]
+collision_mask = 26
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -0.782236, -421.409 )
+scale = Vector2( 4.09287, 5.11636 )
+polygon = PoolVector2Array( -0.969432, 72.3969, -4.81758, 73.2765, -7.71109, 74.6722, -10.0182, 76.3219, -11.4755, 78.5537, -12.2696, 81.3877, -12.1474, 84.1729, -10.8036, 87.3001, -7.74951, 90.3785, -4.63434, 91.7955, -0.236451, 92.333, 2.9398, 92.2841, 5.6274, 91.4535, 8.19283, 90.183, 9.71988, 88.8637, 11.9799, 85.5899, 12.4686, 81.4854, 11.2469, 77.9184, 9.53663, 75.9151, 6.9712, 74.156, 3.73386, 72.8367 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 256 )
+vframes = 10
+hframes = 10
+
+[node name="Health" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CameraTransform" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("..")
+
+[node name="WeaponManager" type="Node2D" parent="."]
+position = Vector2( 57.9322, 7.95843 )
+script = ExtResource( 9 )
+
+[node name="Pistol" parent="WeaponManager" instance=ExtResource( 3 )]
+position = Vector2( 1.66855, -7.34162 )
+
+[node name="SubMachineGun" parent="WeaponManager" instance=ExtResource( 10 )]
+visible = false
+position = Vector2( 78.0881, -8.00903 )
+
+[node name="ShotGun" parent="WeaponManager" instance=ExtResource( 255 )]
+visible = false
+position = Vector2( 63.0712, -8.00905 )

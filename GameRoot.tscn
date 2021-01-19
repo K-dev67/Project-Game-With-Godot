@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Sound/AMBIENCE_HEARTBEAT_LOOP.wav" type="AudioStream" id=1]
+[ext_resource path="res://Interfaces/MainScreen.tscn" type="PackedScene" id=2]
+
+[node name="GameRoot" type="Node"]
+
+[node name="BackgroundMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+
+[node name="MainScreen" parent="." instance=ExtResource( 2 )]

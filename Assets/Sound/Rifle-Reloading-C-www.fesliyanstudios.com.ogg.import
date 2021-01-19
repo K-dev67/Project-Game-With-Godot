@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rifle-Reloading-C-www.fesliyanstudios.com.ogg-344ba6d2dc43270afcd7cbff0ddfc4a4.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Rifle-Reloading-C-www.fesliyanstudios.com.ogg"
+dest_files=[ "res://.import/Rifle-Reloading-C-www.fesliyanstudios.com.ogg-344ba6d2dc43270afcd7cbff0ddfc4a4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

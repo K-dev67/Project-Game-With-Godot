@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Enemy/MarineSpriteSheetTestCircle2.png" type="Texture" id=1]
+[ext_resource path="res://Actors/Enemy.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 93.464
+height = 0.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "Attack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 3 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.490196 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemies",
+]]
+collision_layer = 2
+collision_mask = 15
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+frame = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 0.661328, 1.04011 )
+polygon = PoolVector2Array( -25.3408, -44.8517, -0.418751, -48.7061, 29.8918, -43.5669, 53.4667, -33.7166, 68.2851, -21.725, 73.6737, -7.59203, 74.3473, 8.68228, 69.6323, 16.8194, 60.8759, 25.3849, 49.4252, 36.0917, 24.5032, 45.5136, 1.60195, 48.0833, -16.5844, 46.3702, -30.0557, 42.944, -41.5064, 38.6613, -55.6513, 32.6655, -65.0813, 24.9566, -71.8169, 15.1064, -74.5112, 5.25611, -73.8376, -2.45278, -72.4905, -11.8748, -69.1227, -18.2988, -59.0192, -28.1491, -49.5892, -35.858, -38.1386, -40.9972 )
+
+[node name="MeleeRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeRange"]
+position = Vector2( 0.438004, -0.136204 )
+shape = SubResource( 1 )
+
+[node name="ChaseTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Attack = SubResource( 2 )
+anims/Disappear = SubResource( 3 )
+[connection signal="body_entered" from="MeleeRange" to="." method="_on_MeleeRange_body_entered"]
+[connection signal="body_exited" from="MeleeRange" to="." method="_on_MeleeRange_body_exited"]
+[connection signal="timeout" from="ChaseTimer" to="." method="_on_ChaseTimer_timeout"]

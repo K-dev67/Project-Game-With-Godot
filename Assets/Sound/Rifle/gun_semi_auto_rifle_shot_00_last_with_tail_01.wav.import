@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gun_semi_auto_rifle_shot_00_last_with_tail_01.wav-ba146d8a64d60b8e33efd8e53357e39a.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/Rifle/gun_semi_auto_rifle_shot_00_last_with_tail_01.wav"
+dest_files=[ "res://.import/gun_semi_auto_rifle_shot_00_last_with_tail_01.wav-ba146d8a64d60b8e33efd8e53357e39a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
